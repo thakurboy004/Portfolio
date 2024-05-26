@@ -1,0 +1,38 @@
+.footer {
+  background: #333333;
+  color: white;
+}
+.footer .links ul {
+  list-style-type: none;
+}
+.footer .links li a {
+  color: white;
+  transition: color 0.2s;
+}
+.footer .links li a:hover {
+  text-decoration: none;
+  color: #FF6700;
+}
+.footer .about-company i {
+  font-size: 25px;
+}
+.footer .about-company a {
+  color: white;
+  transition: color 0.2s;
+}
+.footer .about-company a:hover {
+  color: #FF6700;
+}
+.footer .location i {
+  font-size: 18px;
+}
+.footer .copyright p {
+  border-top: 1px solid rgba(255, 138, 138, 0.1);
+}
+.contact-link{
+  text-decoration: none;
+  color: white;
+}
+.contact-link:hover{
+  color: #FF6700;
+}
