@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>About Me</title>
+  <link rel="stylesheet" href="{%static 'css/about.css'%}">
+
+</head>
+<body>
+  {%include 'navbar.html'%}
+<!-- partial:index.partial.html -->
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+    <link rel="stylesgeet" href="https://rawgit.com/creativetimofficial/material-kit/master/assets/css/material-kit.css">
+</head>
+
+<body> 
+  <div class="profile-page">
+    <div class="page-header header-filter" data-parallax="true" style="background-image:url('../static/img/About-cover.jpg'); background-size: contain; background-repeat: no-repeat;"></div>
+    <div class="main main-raised">
+		<div class="profile-content">
+            <div class="container">
+                <div class="row">
+	                <div class="col-md-6 ml-auto mr-auto">
+        	           <div class="profile">
+	                        <div class="avatar">
+	                            <img src="{%static 'img/hero.jpg'%}" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+	                        </div>
+	                        <div class="name">
+	                            <h3 class="title">Abhishek Thakur</h3>
+								              <h6>On a mission to create Innovative Software | Machine learning Enthusiast | Web Development Specialist | Blogger</h6>
+                          </div>
+	                    </div>
+    	            </div>
+                </div>
+                <div class="description text-center">
+                    <p>An artist of considerable range, Chet Faker — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
+                </div>
+                <!-- my education -->
+                <div class="title-text">
+                    <h2>Education</h2>
+                    <div>
+                <div class="education">
+                          <h4>Guru Gobind Singh Indraprastha University</h4>
+                          <p>Bachelor's degree, Artificial Intelligence</p>
+                          <span>Oct 2022 - Oct 2025</span>
+                          <p><i class="fa fa-book"></i> Exploratory Data Analysis, JavaScript and other skills</p>
+                </div>
+                <div class="education">
+                        <h4>Aditya Institute Of Technology</h4>
+                        <p>Diploma of Education, Computer Science</p>
+                        <span>Aug 2019 - Aug 2022</span>
+                        <p><i class="fa fa-book"></i>  Computer Science and Engineering</p>
+                </div>
+                    </div>
+                </div>
+                <!-- my experience -->
+                <div class="title-text">
+                    <h2>Experience</h2>
+                </div>
+                <div class="experience">
+                  <h4>TECH ACCESS LEARNING PVT LTD</h4>
+                  <p>Web Technology Intern</p>
+                  <span>Jan 2022 - Mar 2022 · 3 mos</span>
+                  <p class="about-internship">Worked on the front-end development of the website using HTML, CSS, and JavaScript. Also, worked on the back-end development of the website using Python and Django.</p>
+                  <p><i class="fa fa-book"></i>  HTML, CSS, JavaScript, Tkinter, Python</p>
+                  <button class ="about-button" onclick="window.open('https://www.coursera.org/account/accomplishments/specialization/certificate/H7EFPPCQBZAZ', '_blank')"><span class ="about-span">Show credential  <i class="fa fa-external-link"></i></span></button>
+              </div>
+              <div class="experience">
+                <h4>Intel oneAPI Students Club GGSIPU-EDC</h4>
+                <p>AIML Core Engineer</p>
+                <span>Sep 2023 - Mar 2024</span>
+                <p class="about-internship">As a core engineer in the Intel oneAPI Students Club at GGSIPU-EDC, I have contributed to the development and implementation of innovative machine learning projects. My role involves collaborating with a dynamic team, exploring the capabilities of Intel's oneAPI, and mentoring peers in advanced AI and data analysis techniques.</p>
+                <p><i class="fa fa-book"></i>  Kaggle, Problem Solving, Machine Learning, Deep Learning</p>
+                <button class ="about-button" onclick="window.open('https://www.coursera.org/account/accomplishments/specialization/certificate/H7EFPPCQBZAZ', '_blank')"><span class ="about-span">Show credential <i class="fa fa-external-link"></i></span></button>
+            </div>
+              <!-- my certification -->
+              <div class="title-text">
+                  <h2>Certifications and Courses</h2>
+              </div>
+              <div class="certification">
+                <h3>Machine Learning Specialization</h3>
+                <p>Coursera</p>
+                <span>Issued Sep 2023</span>
+                <p>Credential ID H7FPPCQBZAZ</p>
+                <button class ="about-button" onclick="window.open('https://www.coursera.org/account/accomplishments/specialization/certificate/H7EFPPCQBZAZ', '_blank')"><span class ="about-span">Show credential <i class="fa fa-external-link"></i></span></button>
+            </div>
+            <div class="certification">
+              <h3>Personality Development Program</h3>
+              <p>Freedom Employability Academy, FEA</p>
+              <span>Issued Sep 2021</span>
+              <p><i class="fa fa-book"></i>  English, Personality Development, Growth Strategies, Grit · Ethics , Collaboration and Adaptability</p>
+              <button class ="about-button" onclick="window.open('https://www.coursera.org/account/accomplishments/specialization/certificate/H7EFPPCQBZAZ', '_blank')"><span class ="about-span">Show credential  <i class="fa fa-external-link"></i></span></button>
+          </div>
+          <div class="quote">This is a quote</div>
+            </div>
+            </div>
+        </div>
+	</div>
+
+  
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+
+
+   
+</div>
+{%include 'footer.html'%}
+</body>
+
+</body>
+</html>
