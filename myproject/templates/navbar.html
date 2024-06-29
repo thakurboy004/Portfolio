@@ -1,4 +1,5 @@
 {%load static%}
+<html>
 <head>
   <meta charset="UTF-8">
   <meta charset="UTF-8">
@@ -9,7 +10,7 @@
 <body>
 <!-- partial:index.partial.html -->
 <nav class="navbar navbar-expand-custom navbar-mainbg">
-        <a class="navbar-brand navbar-logo" href="#">Code & Creativity</a>
+        <a class="navbar-brand navbar-logo" href="{%url 'home'%}">Code & Creativity</a>
         <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars text-white"></i>
         </button>
@@ -23,7 +24,7 @@
                     <a class="nav-link" href="{%url 'about'%}"><i class="far fa-user"></i>About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="far fa-clone"></i>Projects</a>
+                    <a class="nav-link" href="{%url 'projects'%}"><i class="far fa-clone"></i>Projects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="far fa-chart-bar"></i>Skills</a>
@@ -37,3 +38,4 @@
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js'></script><script  src="{% static 'js/navbar.js'%}"></script>
 
 </body>
+</html>
