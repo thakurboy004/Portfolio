@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+    <link rel="stylesheet" href="{% static 'css/skills.css'%}">
+</head>
+<body>
+    {%include 'navbar.html'%}
+    <main>
+        <h1>My Skills</h1>
+        <section class="skills-section" id="tech-skills">
+            <h2>Tech Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <h3>Languages</h3>
+                    <!-- <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="text"> -->
+                </div>
+                <div class="skill">
+                    <h3>Framework, Platforms & Libraries</h3>
+                </div>
+                <div class="skill">
+                    <h3>Hosting</h3>
+                </div>
+                <div class="skill">
+                    <h3>Databases</h3>
+                </div>
+                <div class="skill">
+                    <h3>Design</h3>
+                </div>
+                <div class="skill">
+                    <h3>Others</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section" id="non-tech-skills">
+            <h2>Soft Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <h3>Communication</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%;" data-percent="90%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>Teamwork</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 85%;" data-percent="85%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>Problem-Solving</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%;" data-percent="80%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section" id="github-stats">
+            <h2>GitHub Stats</h2>
+            <div class="stats-container">
+                <!-- github-stats -->
+                <span class="github-stats">
+                    <img src="https://github-readme-stats.vercel.app/api?username=thakurboy004&theme=radical&show_icons=true&hide_border=true&count_private=true" alt="GitHub Stats">
+                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=thakurboy004&theme=radical&hide_border=true" alt="GitHub Streak">
+                </span>
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=thakurboy004&theme=radical&show_icons=true&hide_border=true&layout=compact" alt="Top Languages">
+            </div>
+        </section>
+
+        <section class="stats-section" id="leetcode-stats">
+            <h2>LeetCode Stats</h2>
+            <!-- leetcode-stats -->
+            <div class="stats-container">
+                <img src="https://leetcode.card.workers.dev/helloabhi004?theme=dark&font=source_code_pro&extension=activity" alt="LeetCode Stats">
+            </div>
+        </section>
+    </main>
+    {%include 'footer.html'%}
+</body>
+</html>

@@ -10,5 +10,5 @@ def about(request):
 def projects(request):
     return render(request, 'project.html')
 
-# def skills(request):
-#     return render(request, 'skills.html')
+def skills(request):
+    return render(request, 'skills.html')
