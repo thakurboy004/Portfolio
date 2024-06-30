@@ -12,9 +12,14 @@ i {
 	margin-right: 10px;
 }
 /*----------bootstrap-navbar-css------------*/
+.navbar{
+	background-color: #333333;
+	padding: 0px;
+}
 .navbar-logo{
 	padding: 15px;
 	color: #fff;
+	z-index: 9999;
 }
 .navbar-logo:hover{
 	padding: 15px;

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{% static 'css/skills.css'%}">
 </head>
 <body>
+    {%include 'loader.html'%}
+    <div id="content">
     {%include 'navbar.html'%}
     <main>
         <h1>My Skills</h1>
@@ -15,11 +17,11 @@
             <h2>Tech Skills</h2>
             <div class="skills-container">
                 <div class="skill">
-                    <h3>Languages</h3>
+                    <h3>Languages </h3>
                     <!-- <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="text"> -->
                 </div>
                 <div class="skill">
-                    <h3>Framework, Platforms & Libraries</h3>
+                    <h3>Framework, Platforms & Libraries </h3>
                 </div>
                 <div class="skill">
                     <h3>Hosting</h3>
@@ -81,5 +83,6 @@
         </section>
     </main>
     {%include 'footer.html'%}
+</div>
 </body>
 </html>
