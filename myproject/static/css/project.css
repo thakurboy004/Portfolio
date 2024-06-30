@@ -120,12 +120,13 @@ body {
     transition: top 0.5s;
 }
 .works-caption:hover{
-    color:#fff;
+    color:#a18f8f;
 }
 
 .block:hover .works-caption {
     top: 33%;
 }
+
 
 .works h2 {
     margin: 7% 0;
