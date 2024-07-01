@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Skills</title>
-    <link rel="stylesheet" href="{% static 'css/skills.css'%}">
+    <title>Hello_abhi004-Skills</title>
+    <link rel="stylesheet" href="{%static 'css/skills.css'%}">
 </head>
 <body>
     {%include 'loader.html'%}
@@ -17,23 +17,58 @@
             <h2>Tech Skills</h2>
             <div class="skills-container">
                 <div class="skill">
-                    <h3>Languages </h3>
-                    <!-- <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="text"> -->
+                    <h3>Languages: </h3>
+                    <br>
+                    <span>
+                        {% for language in languages %}
+                            <img src="{{language}}" alt="skills-Image" class="skill-badge">
+                        {% endfor %}
+                    </span>
                 </div>
                 <div class="skill">
-                    <h3>Framework, Platforms & Libraries </h3>
+                    <h3>Framework, Platforms & Libraries:  </h3>
+                    <br>
+                    <span>
+                        {% for framework in frameworks %}
+                            <img src="{{framework}}" alt="skills-Image" class="skill-badge">
+                        {% endfor %}
+                    </span>
                 </div>
                 <div class="skill">
-                    <h3>Hosting</h3>
+                    <h3>Hosting: </h3>
+                    <br>
+                    <span>
+                        {% for hosting in hosting %}
+                            <img src="{{hosting}}" alt="skills-Image" class="skill-badge">
+                        {% endfor %}
+                    </span>
                 </div>
                 <div class="skill">
-                    <h3>Databases</h3>
+                    <h3>Databases: </h3>
+                    <br>
+                    <span>
+                        {% for database in databases %}
+                            <img src="{{database}}" alt="skills-Image" class="skill-badge">
+                        {% endfor %}
+                    </span>
                 </div>
                 <div class="skill">
-                    <h3>Design</h3>
+                    <h3>Design: </h3>
+                    <br>
+                    <span>
+                        {% for design in design %}
+                            <img src="{{design}}" alt="skills-Image" class="skill-badge">
+                        {% endfor %}
+                    </span>
                 </div>
                 <div class="skill">
-                    <h3>Others</h3>
+                    <h3>Others: </h3>
+                    <br>
+                    <span>
+                        {% for other in others %}
+                            <img src="{{other}}" alt="skills-Image" class="skill-badge">
+                        {% endfor %}
+                    </span>
                 </div>
             </div>
         </section>
@@ -41,45 +76,43 @@
         <section class="skills-section" id="non-tech-skills">
             <h2>Soft Skills</h2>
             <div class="skills-container">
-                <div class="skill">
-                    <h3>Communication</h3>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 90%;" data-percent="90%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h3>Teamwork</h3>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 85%;" data-percent="85%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h3>Problem-Solving</h3>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 80%;" data-percent="80%"></div>
-                    </div>
+                <div class="competence-container">
+                    <span>
+                        {% for skill in skills %}
+                        <div class="competence">
+                            <img src="{{skill.skill_image.url}}" alt="{{skill.skill_name}}" class="competence-logo">
+                            <p class="competence-name">{{skill.skill_name}}</p>
+                        </div>
+                        {% endfor %}
+                    </span>
                 </div>
             </div>
         </section>
 
         <section class="stats-section" id="github-stats">
             <h2>GitHub Stats</h2>
+            {% for github in github %}
             <div class="stats-container">
                 <!-- github-stats -->
                 <span class="github-stats">
-                    <img src="https://github-readme-stats.vercel.app/api?username=thakurboy004&theme=radical&show_icons=true&hide_border=true&count_private=true" alt="GitHub Stats">
-                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=thakurboy004&theme=radical&hide_border=true" alt="GitHub Streak">
+                    {% if github %}
+                        <img src="{{github.github_contribution}}" alt="GitHub Stats">
+                        <img src="{{github.github_streak}}" alt="GitHub Streak">
+                    {% endif %}
                 </span>
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=thakurboy004&theme=radical&show_icons=true&hide_border=true&layout=compact" alt="Top Languages">
+                <img src="{{github.github_language_used}}" alt="Top Languages">
             </div>
+            {% endfor %}
         </section>
 
         <section class="stats-section" id="leetcode-stats">
             <h2>LeetCode Stats</h2>
             <!-- leetcode-stats -->
+             {% for leetcode in leetcode %}
             <div class="stats-container">
-                <img src="https://leetcode.card.workers.dev/helloabhi004?theme=dark&font=source_code_pro&extension=activity" alt="LeetCode Stats">
+                <img src="{{leetcode.leetcode_profile}}" alt="LeetCode Stats">
             </div>
+            {% endfor %}
         </section>
     </main>
     {%include 'footer.html'%}

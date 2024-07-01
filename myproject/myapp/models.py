@@ -31,3 +31,14 @@ class github_stats(models.Model):
 # for leetcode stats
 class leetcode_stats(models.Model):
     leetcode_profile = models.URLField(max_length=500)
+
+# for Soft skills
+class soft_skills(models.Model):
+    skill_image = models.ImageField(upload_to='skill_image/')
+    skill_name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.skill_name
+
+    class Meta:
+        app_label = 'myapp'

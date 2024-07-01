@@ -1,66 +1,66 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
-    {%load static%}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{%static 'css/project.css'%}">
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
 </head>
 <body>
-    {%include 'loader.html'%}
+    {% include 'loader.html' %}
     <div id="content">
-    <!-- Navbar -->
-     {% include 'navbar.html'%}
-    <main>
-        <section class="projects-section">
-            <h1>My Projects</h1>
-            <div class="projects-container">
-                <!-- Project Card Example -->
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <a href="#popup-box">
-                            <div class="block wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.15s">
-                                <div class="works-thumb">
-                                    <img src="../static/img/hero.jpg" alt="Project Image" class="project-image">
+        <!-- Navbar -->
+        <div id="navbar-container">
+            {% include 'navbar.html' %}
+        </div>
+        <main>
+            <section class="projects-section">
+                <h1>My Projects</h1>
+                <div class="projects-container">
+                    <!-- Project Card Example -->
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <a href="#popup-box">
+                                <div class="block wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.15s">
+                                    <div class="works-thumb">
+                                        <img src="../static/img/hero.jpg" alt="Project Image" class="project-image">
+                                    </div>
+                                    <div class="works-caption">Project Title</div>
                                 </div>
-                                <div class="works-caption">Project Title</div>
-                            </div>
-                        </a>
-                        <div id="popup-box" class="overlay">
-                            <div class="popup">
-                                <img src="../static/img/hero.jpg" alt="Cover Image" style="height: inherit; width: 100%; border-radius: 5px;">
-                                <h2>Project Title</h2>
-                                <a class="close" href="#">&times;</a>
-                                <div class="content">
-                                    Here are the details of the project. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempore porro necessitatibus ullam distinctio suscipit aperiam illum, similique illo et, quasi non optio minus commodi enim dolorem eveniet vitae consequatur.
-                                </div>
-                                <div class="tech-stack">
-                                    Open Source
-                                </div>
-                                <div>
-                                    <span class="tech-stack">python</span>
-                                </div>
-                                <div class="frame">
-                                    <a href="#" class="custom-btn code-link">Source Code  <i class="fa fa-external-link"></i></a>
-                                    <a href="#" class="custom-btn code-link">Live  <i class="fa fa-external-link"></i></a>
+                            </a>
+                            <div id="popup-box" class="overlay">
+                                <div class="popup">
+                                    <img src="../static/img/hero.jpg" alt="Cover Image" style="height: inherit; width: 100%; border-radius: 5px;">
+                                    <h2>Project Title</h2>
+                                    <a class="close" href="#">&times;</a>
+                                    <div class="tech-stack">
+                                        Open Source
+                                    </div>
+                                    <div class="content">
+                                        Here are the details of the project. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempore porro necessitatibus ullam distinctio suscipit aperiam illum, similique illo et, quasi non optio minus commodi enim dolorem eveniet vitae consequatur.
+                                    </div>
+                                    <div>
+                                        <span class="tech-stack">python</span>
+                                    </div>
+                                    <div class="frame">
+                                        <a href="#" class="custom-btn code-link">Source Code  <i class="fa fa-external-link"></i></a>
+                                        <a href="#" class="custom-btn code-link">Live  <i class="fa fa-external-link"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Pop up project dialog box -->
-         
-    </main>
-    <!-- footer -->
-     {% include 'footer.html'%}
+            </section>
+        </main>
+        <!-- Footer -->
+        <div id="footer-container">
+            {% include 'footer.html' %}
+        </div>
     </div>
-    <script src="{%static 'js/project.js'%}"></script>
 </body>
 </html>

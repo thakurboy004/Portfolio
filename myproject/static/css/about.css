@@ -336,4 +336,12 @@ img.rounded {
     font-size: 14px;
 }
 
-   
+.spacer {
+    margin: 10px;
+}   
+
+.quote img{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

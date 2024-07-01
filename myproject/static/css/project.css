@@ -1,12 +1,14 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css');
 
 body {
-    /* font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0; */
     background: linear-gradient(135deg, #f0f0f0, #ffcc99);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+#navbar-container, #footer-container {
+    position: relative;
+    z-index: 100;
 }
 
 .projects-section {
@@ -30,8 +32,8 @@ body {
     justify-content: space-around;
 }
 
-/* works */
-.block {
+/* Project block styles */
+.projects-section .block {
     box-shadow: 4px 4px 7px #333;
     overflow: hidden;
     position: relative;
@@ -42,17 +44,12 @@ body {
     width: 26rem;
 }
 
-.block.animate__animated.animate__fadeInUp {
+.projects-section .block.animate__animated.animate__fadeInUp {
     transform: translateY(0);
     opacity: 1;
 }
 
-.works {
-    padding-bottom: 3%;
-    background: #949494;
-}
-
-.works-thumb {
+.projects-section .works-thumb {
     height: 23rem;
     width: 100%;
     overflow: hidden;
@@ -60,7 +57,7 @@ body {
     position: relative;
 }
 
-.project-image {
+.projects-section .project-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -68,11 +65,11 @@ body {
     z-index: 1;
 }
 
-.block:hover .project-image {
+.projects-section .block:hover .project-image {
     transform: scale(1.1);
 }
 
-.block::after, .block::before {
+.projects-section .block::after, .projects-section .block::before {
     content: "";
     background: rgba(0, 0, 0, 0.6);
     position: absolute;
@@ -84,25 +81,25 @@ body {
     z-index: 2;
 }
 
-.block::after {
+.projects-section .block::after {
     left: -50%;
     transition: 0.5s;
 }
 
-.block::before {
+.projects-section .block::before {
     right: -50%;
     transition: 0.5s;
 }
 
-.block:hover:after {
+.projects-section .block:hover::after {
     left: 0;
 }
 
-.block:hover:before {
+.projects-section .block:hover::before {
     right: 0;
 }
 
-.works-caption {
+.projects-section .works-caption {
     text-align: center;
     font-family: "Lato", serif;
     font-size: 2rem;
@@ -119,29 +116,22 @@ body {
     border: 2px solid #fff;
     transition: top 0.5s;
 }
-.works-caption:hover{
-    color:#a18f8f;
+
+.projects-section .works-caption:hover {
+    color: #a18f8f;
 }
 
-.block:hover .works-caption {
+.projects-section .block:hover .works-caption {
     top: 33%;
 }
 
-
-.works h2 {
-    margin: 7% 0;
-}
-/* works end */
-
-
-/* pop-up start */
 a {
     text-decoration: none;
     color: #979797;
     cursor: pointer;
 }
 
-.overlay {
+.projects-section .overlay {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -152,15 +142,15 @@ a {
     visibility: hidden;
     opacity: 0;
     overflow: auto; 
-    z-index: 1000; /* Ensure it's above other content */
+    z-index: 1000;
 }
 
-.overlay:target {
+.projects-section .overlay:target {
     visibility: visible;
     opacity: 1;
 }
 
-.popup {
+.projects-section .popup {
     margin: 70px auto;
     padding: 20px;
     background: #fff;
@@ -170,12 +160,12 @@ a {
     transition: all 5s ease-in-out;
 }
 
-.popup h2 {
+.projects-section .popup h2 {
     margin-top: 0;
     color: #333;
 }
 
-.popup .close {
+.projects-section .popup .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -186,35 +176,35 @@ a {
     color: #333;
 }
 
-.popup .close:hover {
+.projects-section .popup .close:hover {
     color: #FF6700;
 }
 
-.popup .content {
+.projects-section .popup .content {
     max-height: 30%;
     overflow: auto;
 }
 
-.tech-stack{
+.projects-section .tech-stack {
     display: inline-block;
     margin: 14px;
     padding: 10px 20px;
-    background-color: palegoldenrod; /* Adjust color as needed */
+    background-color: palegoldenrod;
     color: #FF6700;
     text-align: center;
     text-decoration: none;
-    border-radius: 20px; /* Adjust the border-radius value for more or less curve */
+    border-radius: 20px;
     transition: background-color 0.3s ease;
 }
-/* pop-up end */
 
-/* code links */
-.code-link {
+.projects-section .code-link {
     border: none;
     color: #000;
     margin: 20px;
+    position: relative;
 }
-.code-link:after {
+
+.projects-section .code-link:after {
     position: absolute;
     content: "";
     width: 0;
@@ -230,11 +220,13 @@ a {
      4px 4px 5px 0px #0001;
     transition: all 0.3s ease;
 }
-.code-link:hover {
+
+.projects-section .code-link:hover {
     color: #000;
     text-decoration: none;
 }
-.code-link:hover:after {
+
+.projects-section .code-link:hover:after {
     left: auto;
     right: 0;
     width: 100%;
@@ -244,31 +236,30 @@ a {
      7px 7px 20px 0px #fff9,
      4px 4px 5px 0px #fff9;
 }
-.code-link:active {
+
+.projects-section .code-link:active {
     top: 2px;
 }
-.frame {
+
+.projects-section .frame {
     width: 90%;
     margin: 40px auto;
     text-align: center;
 }
-.custom-btn {
+
+.projects-section .custom-btn {
     width: 130px;
     height: 40px;
-    /* color: #fff; */
     text-decoration: none;
     border-radius: 5px;
     padding: 10px 25px;
     font-family: 'Lato', sans-serif;
     font-weight: 500;
     background: transparent;
-    /* cursor: pointer; */
     transition: all 0.3s ease;
     position: relative;
-    /* display: inline-block; */
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+                7px 7px 20px 0px rgba(0,0,0,.1),
+                4px 4px 5px 0px rgba(0,0,0,.1);
     outline: none;
-  }
-  
+}
