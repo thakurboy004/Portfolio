@@ -18,6 +18,9 @@ class projectstats(models.Model):
     def __str__(self):
         return self.project_title
     
+    class Meta:
+        app_label = 'myapp'
+    
 
 # for github stats
 class github_stats(models.Model):
