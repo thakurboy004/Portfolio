@@ -13,7 +13,8 @@ class projectstats(models.Model):
     contribution = models.CharField(max_length=2,choices=CONTRIBUTION_TYPE, default='PP')
     project_description = models.TextField(max_length=800)
     source_code = models.URLField(max_length=500)
-    deployed_link = models.URLField(max_length=500)
+    deployed_link = models.URLField(max_length=500, null=True, blank=True)
+    tech_stack = models.TextField(max_length=500, default='python')
 
     def __str__(self):
         return self.project_title

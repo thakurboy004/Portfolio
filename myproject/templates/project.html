@@ -22,38 +22,50 @@
                 <h1>My Projects</h1>
                 <div class="projects-container">
                     <!-- Project Card Example -->
+                     {% for project in projects %}
                     <div class="row">
                         <div class="col-md-4 col-sm-6 col-xs-12">
-                            <a href="#popup-box">
+                            <a href="#popup-box-{{project.project_title}}">
                                 <div class="block wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.15s">
                                     <div class="works-thumb">
-                                        <img src="../static/img/hero.jpg" alt="Project Image" class="project-image">
+                                        <img src="{{project.project_image.url}}" alt="{{project.project_title}}" class="project-image">
                                     </div>
-                                    <div class="works-caption">Project Title</div>
+                                    <div class="works-caption">{{project.project_title}}</div>
                                 </div>
                             </a>
-                            <div id="popup-box" class="overlay">
+                            <div id="popup-box-{{project.project_title}}" class="overlay">
                                 <div class="popup">
-                                    <img src="../static/img/hero.jpg" alt="Cover Image" style="height: inherit; width: 100%; border-radius: 5px;">
-                                    <h2>Project Title</h2>
+                                    <img src="{{project.project_image.url}}" alt="{{project.project_title}}" style="height: inherit; width: 100%; border-radius: 5px;">
+                                    <h2>{{project.project_title}}</h2>
                                     <a class="close" href="#">&times;</a>
                                     <div class="tech-stack">
-                                        Open Source
+                                        {% if  project.contribution == 'PP'%}
+                                        Personal Project
+                                        {% else %}
+                                        Open Source contribution
+                                        {% endif %}
                                     </div>
                                     <div class="content">
-                                        Here are the details of the project. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempore porro necessitatibus ullam distinctio suscipit aperiam illum, similique illo et, quasi non optio minus commodi enim dolorem eveniet vitae consequatur.
+                                        <p>{{project.project_description}}</p>
                                     </div>
                                     <div>
-                                        <span class="tech-stack">python</span>
+                                        {%for tech in project.tech_stack.split%}
+                                        <span class="tech-stack">{{tech}}</span>
+                                        {%endfor%}
                                     </div>
                                     <div class="frame">
-                                        <a href="#" class="custom-btn code-link">Source Code  <i class="fa fa-external-link"></i></a>
-                                        <a href="#" class="custom-btn code-link">Live  <i class="fa fa-external-link"></i></a>
+                                        <a href="{{project.source_code}}" class="custom-btn code-link">Source Code  <i class="fa fa-external-link"></i></a>
+                                        {% if project.deployed_link %}
+                                        <a href="{{project.deployed_link}}" class="custom-btn code-link">Live  <i class="fa fa-external-link"></i></a>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
+                    </div>
+                    
                 </div>
             </section>
         </main>

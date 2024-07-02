@@ -1,7 +1,4 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
     background-color: #f7f7f7;
     color: #3d3d3d;
 }
@@ -11,7 +8,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    text-align: center;
+    text-align: left;
 }
 
 .container {
@@ -25,8 +22,8 @@ header {
 
 .intro {
     flex: 1;
-    text-align: left; /* Adjust text alignment as needed */
-    padding: 20px; /* Adjust padding as needed */
+    text-align: left;
+    padding: 20px;
 }
 
 .intro h2 {
@@ -40,37 +37,10 @@ header {
     color: #474747;
 }
 
-.intro .subtitle {
-    display: inline-block;
-    /* background-color: #7b6ef6; */
-    color: #FF6700;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-.intro .quote {
-    font-size: 18px;
-    color: #bbb;
-    margin-bottom: 30px;
-}
-
 .social-links {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 15px;
-}
-
-.social-links a {
-    color: #bbb;
-    font-size: 24px;
-    text-decoration: none;
-    transition: color 0.3s;
-    box-shadow: 1 0 0 0 #4242427e;
-}
-
-.social-links a:hover {
-    color: #ffd390;
 }
 
 .social-links button {
@@ -82,7 +52,6 @@ header {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    box-shadow: 1px 0 0 0 #4242427e;
 }
 
 .social-links button:hover {
@@ -92,11 +61,8 @@ header {
 }
 
 .profile-picture {
-    height: 300px; /* Adjust height as needed */
-    width: 300px; /* Adjust width as needed */
-    margin: auto; /* Center horizontally */
-    margin-top: 20px; /* Adjust margin as needed */
-    margin-bottom: 9px; /* Adjust margin as needed */
+    height: 300px;
+    width: 300px;
     position: relative;
 }
 
@@ -113,16 +79,12 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px; /* Adjust width as needed */
-    height: 400px; /* Adjust height as needed */
+    width: 400px;
+    height: 400px;
     background-color: #FF6700;
     z-index: -10;
     border-radius: 50%;
-    animation-name: animate;
-    animation-duration: 5s;
-    transition: all 1s ease-in-out;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: animate 5s infinite linear;
 }
 
 @keyframes animate {
@@ -138,30 +100,35 @@ header {
 }
 
 .container1 {
-    text-align: center;
+    text-align: left;
+    padding: 20px;
+    padding-left: 0%;
+    width: 22ch;
 }
 
-#typing-text {
-    font-size: 24px;
-    margin-top: 20px;
-}
 .typing-container {
-    /* font-family: 'Courier New', Courier, monospace; */
-    font-size: 24px;
+    font-size: 34px;
+    content: "";
     white-space: nowrap;
+    font-weight: bold;
     overflow: hidden;
     border-right: 2px solid #FF6700;
     color: #FF6700;
-    width: 20ch; /* Adjust to control the width of the text container */
-    animation: typing 4s steps(20, end), blink-caret 0.75s step-end infinite;
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 20ch; }
+    to { width: 100%; }
 }
 
 @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: #FF6700; }
+}
+
+.spacer {
+    height: 5rem;
 }

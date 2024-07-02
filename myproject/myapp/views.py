@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from . import links
-from .models import github_stats, leetcode_stats, soft_skills
+from .models import github_stats, leetcode_stats, soft_skills, projectstats
 
 # Create your views here.
 def home(request):
@@ -10,7 +10,8 @@ def about(request):
     return render(request, 'about.html')
 
 def projects(request):
-    return render(request, 'project.html')
+    projects = projectstats.objects.all()
+    return render(request, 'project.html', {'projects': projects})
 
 def skills(request):
     skills = soft_skills.objects.all()

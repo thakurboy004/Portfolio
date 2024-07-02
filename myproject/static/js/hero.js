@@ -1,35 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
     const words = [
-        "Machine Learning",
-        "open source contributor",
-        "software developer",
-        "cybersecurity enthusiast"
+        "Machine Learning Engineer",
+        "Open Source Contributor",
+        "Software Developer",
+        "Cybersecurity Enthusiast"
     ];
 
     const typingText = document.getElementById('typing-text');
     let wordIndex = 0;
     let charIndex = 0;
+    let isDeleting = false;
 
     function type() {
-        if (charIndex < words[wordIndex].length) {
-            typingText.textContent += words[wordIndex].charAt(charIndex);
-            charIndex++;
-            setTimeout(type, 100); // Adjust typing speed here (milliseconds)
-        } else {
-            setTimeout(erase, 1500); // Wait before erasing
-        }
-    }
-
-    function erase() {
-        if (charIndex > 0) {
-            typingText.textContent = words[wordIndex].substring(0, charIndex - 1);
+        const currentWord = words[wordIndex];
+        if (isDeleting) {
             charIndex--;
-            setTimeout(erase, 50); // Adjust erasing speed here (milliseconds)
+            typingText.textContent = currentWord.substring(0, charIndex);
+            if (charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(type, 500); // Wait before typing next word
+            } else {
+                setTimeout(type, 50); // Adjust erasing speed here (milliseconds)
+            }
         } else {
-            wordIndex = (wordIndex + 1) % words.length; // Move to next word
-            setTimeout(type, 500); // Wait before typing next word
+            charIndex++;
+            typingText.textContent = currentWord.substring(0, charIndex);
+            if (charIndex === currentWord.length) {
+                isDeleting = true;
+                setTimeout(type, 1500); // Wait before erasing
+            } else {
+                setTimeout(type, 100); // Adjust typing speed here (milliseconds)
+            }
         }
     }
 
-    setTimeout(type, 1000); // Start typing after 1 second
+    type();
 });
