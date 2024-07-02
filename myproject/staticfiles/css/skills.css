@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffffff, #ffffff); /* Use a gradient background */
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.skills-section, .stats-section {
+    background-color: rgba(0, 0, 0, 0.281);
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skills-section h2, .stats-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.skill-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 5px;
+    height: 3px; /* Make the progress bar thinner */
+}
+
+.skill-level {
+    background-color: #FF6700;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    position: relative;
+    transition: width 0.5s ease-in-out;
+}
+
+.skill-level::after {
+    content: attr(data-percent); /* Display the percentage */
+    position: absolute;
+    top: -20px; /* Position the percentage above the bar */
+    right: 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.stats-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.github-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.skill-badge{
+    display: inline-block;
+    flex-direction: row;
+    height: 7%;
+    width: 6%;
+    margin: 0 3px;
+}
+
+.competence-container {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.competence-container .title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.competence-container .subtitle {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.competence-container .competence {
+    display: inline-block;
+    padding: 20px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.competence-container .competence-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.competence-container .competence-name {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: white;
+}
+.competence{
+    margin: 20px;
+}

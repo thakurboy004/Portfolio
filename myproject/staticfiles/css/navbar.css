@@ -1,0 +1,25 @@
+.navbar {
+    background-color: #333333;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link i {
+    margin-right: 8px;
+}
+
+.nav-link:hover {
+    color: orangered !important;
+    transition: color 0.2s;
+}

@@ -1,0 +1,134 @@
+body {
+    background-color: #f7f7f7;
+    color: #3d3d3d;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.intro {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.intro h2 {
+    font-size: 24px;
+    color: #474747;
+}
+
+.intro h1 {
+    font-size: 48px;
+    margin: 10px 0;
+    color: #474747;
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.social-links button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #121212;
+    background-color: #bbb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.social-links button:hover {
+    background-color: #ffd390;
+    color: #121212;
+    transform: scale(1.1);
+}
+
+.profile-picture {
+    height: 300px;
+    width: 300px;
+    position: relative;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #FF6700;
+    object-fit: cover;
+}
+
+.blob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background-color: #FF6700;
+    z-index: -10;
+    border-radius: 50%;
+    animation: animate 5s infinite linear;
+}
+
+@keyframes animate {
+    0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+.container1 {
+    text-align: left;
+    padding: 20px;
+    padding-left: 0%;
+    width: 22ch;
+}
+
+.typing-container {
+    font-size: 34px;
+    content: "";
+    white-space: nowrap;
+    font-weight: bold;
+    overflow: hidden;
+    border-right: 2px solid #FF6700;
+    color: #FF6700;
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #FF6700; }
+}
+
+.spacer {
+    height: 5rem;
+}
